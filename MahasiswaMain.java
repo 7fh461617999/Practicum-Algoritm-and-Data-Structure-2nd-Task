@@ -10,8 +10,9 @@ public class MahasiswaMain {
         // Using PARAMETERIZED constructor - set values at creation
         Mahasiswa mhs2 = new Mahasiswa("Annisa Nabila", "2141720160", 3.25, "TI 2L");
         // All values set in ONE line!
-        
+        Mahasiswa mhsBudi = new Mahasiswa("Budi Santoso", "2241720999", 3.75, "TI 3A");
         mhs1.tampilkanInformasi();
         mhs2.tampilkanInformasi();
+        mhsBudi.tampilkanInformasi();
     }
 }

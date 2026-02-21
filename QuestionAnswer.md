@@ -46,11 +46,39 @@ mhs1.tampilkanInformasi();
 // Output: Nama: Muhammad Ali Farhan, Kelas: SI 2K, IPK: 3.60  
 
 ### practicum 3
-1.
-2.
-3.
+1. // THIS LINE declares the parameterized constructor  
+public Mahasiswa(String nm, String nim, double ipk, String kls) {  
+    nama = nm;  
+    this.nim = nim;  
+    this.ipk = ipk;  
+    kelas = kls;  
+}  
+2. Mahasiswa mhs2 → Declares a variable that can hold a Mahasiswa object  
+new → Creates a NEW object in memory  
+Mahasiswa(...) → Calls the constructor with parameters  
+"Annisa Nabila" → Passed as nm parameter  
+"2141720160" → Passed as nim parameter  
+3.25 → Passed as ipk parameter  
+"TI 2L" → Passed as kls parameter  
+3. If you remove:
+public Mahasiswa() { }  // Delete this
+And keep only:
+public Mahasiswa(String nm, String nim, double ipk, String kls) { ... }
 
-### practicum 4
-1.
-2.
-3.
+Then this line will FAIL:
+Mahasiswa mhs1 = new Mahasiswa();  // ERROR! No default constructor
+Why? Because Java only provides a default constructor automatically if you don't create ANY constructors. Once you create a parameterized constructor, the default one disappears unless you explicitly write it.
+
+Ande the Error message:
+constructor Mahasiswa in class Mahasiswa cannot be applied to given types;
+  required: String, String, double, String
+  found: no arguments
+
+4. NO! Methods can be called in ANY order, depending on what you want to do.
+Think of it like a TV remote:
+- You can change volume Before changing channel
+- You can turn on TV Before adjusting settings
+- The order depends on what you want to accomplish
+
+5.The new object is: 
+Mahasiswa mhsBudi = new Mahasiswa("Budi Santoso", "2241720999", 3.75, "TI 3A");
